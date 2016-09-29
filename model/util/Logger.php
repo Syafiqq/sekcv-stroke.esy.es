@@ -57,10 +57,10 @@ class Logger
      */
     public static function getInstance()
     {
-        if(Logger::$instance == null)
+        if(self::$instance == null)
         {
-            Logger::$instance = new Logger();
+            self::$instance = new Logger();
         }
-        return Logger::$instance->getLogger();
+        return self::$instance->getLogger();
     }
 }
