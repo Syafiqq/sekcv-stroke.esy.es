@@ -1,1 +1,0 @@
-[Thu Sep 29 13:54:43.822733 2016] [:error] [pid 8448:tid 1892] [client 127.0.0.1:53045] PHP Notice:  Undefined index: PATH_INFO in D:\\Muhammad Syafiq\\Documents\\JetBrains\\PhpStorm\\sekcv-stroke.esy.es\\index.php on line 24
