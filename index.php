@@ -21,10 +21,14 @@ $mux->any('/hello/add', ['controller\dump\HelloController', 'addAction']);
 
 
 $logger = Logger::getInstance();
-$logger->addDebug($serverPath = $_SERVER['PATH_INFO']);
-
-$route = $mux->dispatch($serverPath);
-if($route != null)
+if(isset($_SERVER['PATH_INFO']))
 {
-    Executor::execute($route);
+    $logger->addDebug($serverPath = $_SERVER['PATH_INFO']);
+    $route = $mux->dispatch($serverPath);
+    if($route != null)
+    {
+        Executor::execute($route);
+    }
 }
+
+
