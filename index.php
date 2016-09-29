@@ -15,10 +15,8 @@ use model\util\Logger;
 use Pux\Executor;
 use Pux\Mux;
 
-
 $mux = new Mux;
 $mux->any('/hello/add', ['controller\dump\HelloController', 'addAction']);
-
 
 $logger = Logger::getInstance();
 if(isset($_SERVER['PATH_INFO']))
