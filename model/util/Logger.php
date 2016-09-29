@@ -45,7 +45,7 @@ class Logger
     /**
      * @return MonologLogger
      */
-    public function getLogger(): MonologLogger
+    public function getLogger()
     {
         $this->logger->addInfo('Logger.getLogger');
 
@@ -55,7 +55,7 @@ class Logger
     /**
      * @return MonologLogger
      */
-    public static function getInstance(): MonologLogger
+    public static function getInstance()
     {
         if(Logger::$instance == null)
         {
