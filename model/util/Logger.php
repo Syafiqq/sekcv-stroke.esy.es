@@ -9,7 +9,7 @@
  */
 namespace model\util;
 
-require __DIR__.'/../../vendor/autoload.php'; // use PCRE patterns you need Pux\PatternCompiler class.
+require $_SERVER['DOCUMENT_ROOT'].'/vendor/autoload.php'; // use PCRE patterns you need Pux\PatternCompiler class.
 use Monolog\Formatter\LineFormatter;
 use Monolog\Handler\ChromePHPHandler;
 use Monolog\Handler\StreamHandler;
@@ -36,7 +36,7 @@ class Logger
         $stream = new ChromePHPHandler();
         $this->logger->pushHandler($stream);
 
-        $stream = new StreamHandler(__DIR__ . '/../../my_app.log', MonologLogger::DEBUG);
+        $stream = new StreamHandler($_SERVER['DOCUMENT_ROOT'] . '/logs/application/app.log', MonologLogger::DEBUG);
         $stream->setFormatter($formatter);
         $this->logger->pushHandler($stream);
         $this->logger->addInfo('Logger.__construct');
