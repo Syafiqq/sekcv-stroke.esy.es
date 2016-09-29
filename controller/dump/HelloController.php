@@ -11,7 +11,7 @@ namespace controller\dump;
 use model\util\Logger;
 use Pux;
 
-include_once __DIR__.'/../../model/util/Logger.php';
+include_once $_SERVER['DOCUMENT_ROOT'].'/model/util/Logger.php';
 
 class HelloController extends Pux\Controller
 {
@@ -20,16 +20,16 @@ class HelloController extends Pux\Controller
     public function __construct()
     {
         $this->logger = Logger::getInstance();
-        $this->logger->addDebug("controller\\dump\\HellosController\\__construct");
+        $this->logger->addDebug("controller\\dump\\HelloController\\__construct");
     }
 
     public function indexAction()
     {
-        $this->logger->addDebug("controller\\dump\\HellosController\\index");
+        $this->logger->addDebug("controller\\dump\\HelloController\\index");
     }
 
     public function addAction()
     {
-        $this->logger->addDebug("controller\\dump\\HellosController\\add");
+        $this->logger->addDebug("controller\\dump\\HelloController\\add");
     }
 }
