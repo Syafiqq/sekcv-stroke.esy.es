@@ -33,10 +33,10 @@ class Logger
         $this->logger = new MonologLogger('debug');
 
         // Now add some handlers
-        $stream = new ChromePHPHandler();
-        $this->logger->pushHandler($stream);
+        //$stream = new ChromePHPHandler();
+        //$this->logger->pushHandler($stream);
 
-        $stream = new StreamHandler($_SERVER['DOCUMENT_ROOT'] . '/logs/application/app.log', MonologLogger::DEBUG);
+        $stream = new StreamHandler($_SERVER['DOCUMENT_ROOT'] . '/logs/apps/app.log', MonologLogger::DEBUG);
         $stream->setFormatter($formatter);
         $this->logger->pushHandler($stream);
         $this->logger->addInfo('Logger.__construct');
